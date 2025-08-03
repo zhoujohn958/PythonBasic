@@ -100,56 +100,6 @@ ssh -T git@github.com
 3. 输入 "Git: Initialize Repository"
 4. 选择项目根目录
 
-### 3. 配置Git设置
-在项目根目录创建 `.gitignore` 文件：
-
-```
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
-venv/
-env/
-ENV/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Data files
-*.csv
-*.xlsx
-*.json
-```
-
 ## 项目版本控制流程
 
 ### 1. 创建GitHub仓库
@@ -325,49 +275,6 @@ cd 仓库名
 pip install -r requirements.txt
 ```
 
-## 使用方法
-描述如何使用项目。
-
-## 贡献指南
-说明如何贡献代码。
-
-## 许可证
-项目许可证信息。
-```
-
-### 3. GitHub Actions配置
-创建 `.github/workflows/ci.yml`：
-
-```yaml
-name: CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.11'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    
-    - name: Run tests
-      run: |
-        python -m pytest tests/
-```
 
 ## 常见问题解决
 
@@ -406,61 +313,6 @@ git log --diff-filter=D --summary
 # 恢复文件
 git checkout 提交哈希 -- 文件路径
 ```
-
-## 最佳实践
-
-### 1. 提交信息规范
-- 使用清晰的提交信息
-- 遵循约定式提交格式：
-  - `feat:` 新功能
-  - `fix:` 修复bug
-  - `docs:` 文档更新
-  - `style:` 代码格式调整
-  - `refactor:` 代码重构
-  - `test:` 测试相关
-  - `chore:` 构建过程或辅助工具的变动
-
-### 2. 分支命名规范
-- `main` - 主分支
-- `develop` - 开发分支
-- `feature/功能名` - 功能分支
-- `bugfix/问题描述` - 修复分支
-- `hotfix/紧急修复` - 紧急修复分支
-
-### 3. 工作流程建议
-1. 始终从最新代码开始工作
-2. 经常提交，小步快跑
-3. 及时推送代码到远程仓库
-4. 使用有意义的提交信息
-5. 定期清理已合并的分支
-
-### 4. 安全注意事项
-- 不要在代码中提交敏感信息
-- 使用环境变量管理配置
-- 定期更新依赖包
-- 启用GitHub的安全功能
-
-## 总结
-
-通过本指南，您应该能够：
-
-1. ✅ 正确安装和配置Git
-2. ✅ 设置GitHub账户和SSH密钥
-3. ✅ 在Cursor中使用Git进行版本控制
-4. ✅ 管理项目分支和合并
-5. ✅ 参与协作开发
-6. ✅ 解决常见问题
-7. ✅ 遵循最佳实践
-
-### 验证清单
-- [ ] Git安装并配置
-- [ ] GitHub账户设置完成
-- [ ] SSH密钥配置成功
-- [ ] 本地仓库初始化
-- [ ] 远程仓库连接
-- [ ] 首次提交和推送
-- [ ] 分支管理测试
-- [ ] 协作流程了解
 
 祝您开发愉快！
 
