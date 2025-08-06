@@ -18,11 +18,12 @@
     "python.defaultInterpreterPath": "C:\\ProgramData\\anaconda3\\python.exe",
     "python.terminal.activateEnvironment": true,
     "editor.formatOnSave": true,
+    "editor.fontSize": 18,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "explorer.confirmDelete": true,
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": true
 }
